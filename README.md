@@ -1,1 +1,1 @@
-# cursoJs_soyDalto
+# Playground para cursos
