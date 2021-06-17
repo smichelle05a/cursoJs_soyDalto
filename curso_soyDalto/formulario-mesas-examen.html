@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CursoJs soyDalto</title>
+</head>
+
+<body class="bg-dark text-light">
+    <h1>Curso Js soyDalto</h1>
+    <br>
+    <div class="container col-md-6 col-sm-8">
+        <form class="row g-3" novalidate>
+            <h2 class="text-center text-info">Inscripción de materias adeudadas</h2>
+            <div class="mb-3 mx-auto">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3 mx-auto">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3 mx-auto">
+                <label for="materia" class="form-label">Materia Adeudada</label>
+                <input type="text" class="form-control" id="materia" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="btn-submit">Enviar</button>
+            </div>
+            <div id="resultado"></div>
+        </form>
+    </div>
+            <script src="./css/bootstrap/bootstrap.bundle.js"></script>
+            <script src="./js/formulario-mesas-examen.js"></script>
+</body>
+
+</html>

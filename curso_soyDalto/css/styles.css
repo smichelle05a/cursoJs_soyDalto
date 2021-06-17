@@ -1,0 +1,10 @@
+body main .container {
+  padding: 60px 15px 5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/56f63166d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CursoJs soyDalto</title>
+</head>
+
+<body class=" bg-dark text-light">
+    <header>
+        <h1 class="my-4 text-center">Curso Js soyDalto</h1>
+    </header>
+    <main class="my-3">
+        <form class="d-flex mx-auto col-4">
+            <input class="form-control me-2" type="search" placeholder="Buscar Alumno" id="buscarAlumno">
+            <button class="btn btn-outline-success" type="submit" id="btn-search"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="text-center container mt-3">
+            <h2 class="d-none my-3" id="nombreAlumno"></h2>
+            <h3 class="d-none my-3 text-danger" id="error">No se encontraron los datos solicitados</h3>
+            <table class="d-none table table-dark table-hover" id="tabla">
+                <thead>
+                    <th class="col-3">Materia</th>
+                    <th class="col-3">Profesor</th>
+                    <th class="col-2">Asistencia</th>
+                    <th class="col-2">Promedio</th>
+                    <th class="col-2">Trabajos Prácticos</th>
+                </thead>
+                <tbody id="datos">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./css/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
