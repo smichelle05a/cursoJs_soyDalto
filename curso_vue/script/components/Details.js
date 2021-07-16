@@ -27,6 +27,7 @@ const Details = {
                 :synopsis="movie.overview"
                 :like="movie.like"
                 @toggleLike="onToggleLike"
+                @movie="getMovie"
                 />
             </div>
         </div>
@@ -44,14 +45,22 @@ const Details = {
             showFav: false
         }
     },
+    computed: {
+        ...Vuex.mapState(['favMovies']),
+    },
     methods: {
         similarMovies() {
+            this.similar = [];
             fetch(`${this.apiBaseUrl}movie/${this.$route.params.id}/similar${this.apiConfig}`)
                 .then(res => res.json())
                 .then(({ results }) => {
+                    let resultados = results.map(m => {
+                        m.like = false;
+                        return m
+                    });
                     for (let i = 0; i <= 5; i++) {
-                        this.similar.push(results[i])
-                    }
+                        this.similar.push(resultados[i])
+                    };
                 })
         },
         getMovie() {
@@ -63,11 +72,12 @@ const Details = {
             this.similarMovies();
         },
         onToggleLike(data) {
-            let movieLike = this.movies.find(movie => movie.id == data.id);
+            let movieLike = this.similar.find(movie => movie.id == data.id);
             movieLike.like = data.like;
             this.toggleFavMovie(movieLike);
             this.showFav = data.like
         },
+        ...Vuex.mapMutations(['toggleFavMovie'])
     },
     filters: {
         formatOverview(value) {

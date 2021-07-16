@@ -6,11 +6,11 @@ const MovieComp = {
             <h5 class="card-title"> {{title | uppercase}} </h5>
             <p class="card-text"> {{synopsis | shorten}} </p>
             <div class="row d-flex">
-                <router-link
-                :to="{ name: 'movie', params: { id: id}}"
+                <button
+                @click="movie"
                 class="btn btn-sm mx-1 btn-outline-dark col">
                     <span>Detalle</span>
-                </router-link>
+                </button>
                 <button @click="toggleLike" class="btn btn-sm mx-1 col" :class="{
                 'btn-outline-danger': isFav,
                 'btn-outline-dark': !isFav
@@ -74,10 +74,14 @@ const MovieComp = {
         toggleLike() {
             let data = {
                 id: this.id,
-                // like: !this.like
                 like: !this.isFav
             }
             this.$emit('toggleLike', data)
         },
+        movie() {
+            let id = this.id;
+            router.push({ name: 'movie', params: { id: id } })
+            this.$emit('movie', id);
+        }
     }
 }

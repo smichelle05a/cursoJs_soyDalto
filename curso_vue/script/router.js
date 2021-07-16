@@ -5,7 +5,7 @@ const routes = [
         component: Home
     },
     {
-        path: `${URLDeploy}/movie/: id`,
+        path: `${URLDeploy}/movie/:id`,
         name: 'movie',
         component: Details
     },
