@@ -6,7 +6,7 @@ Vue.component('nav-bar',{
                 <div class="container-fluid">
                     <router-link class="navbar-brand"
                     :to="{name:'home'}">
-                        <img src="/img/favicon.ico" alt="logo" width="30" height="24">
+                        <img src="img/favicon.ico" alt="logo" width="30" height="24">
                     </router-link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-navbar"
                         aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">

@@ -11,7 +11,7 @@ Vue.mixin({
     filters: {
         coverURL(str) {
             let URL = "";
-            if (str == null) URL = "/img/404poster.png"
+            if (str == null) URL = "img/404poster.png"
             else URL = `https://image.tmdb.org/t/p/original${str}`
             return URL
         },

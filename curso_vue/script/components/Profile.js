@@ -38,7 +38,7 @@ const Profile = {
                     </form>
                 </div>
                 <div class="col-md-5 order-md-1 my-auto text-center">
-                    <img src="/img/user.png" alt="user photo" class="img-fluid mx-auto" width="300" role="img"
+                    <img src="img/user.png" alt="user photo" class="img-fluid mx-auto" width="300" role="img"
                         aria-label="user photo" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <h2 class=" my-3 fw-light lh-1">
                         {{user.name}} {{user.lastName}}
