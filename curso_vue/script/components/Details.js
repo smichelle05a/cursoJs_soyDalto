@@ -1,18 +1,20 @@
 const Details = {
     name: 'Details',
     template: /* html */ `
-    <div class="h100" v-if="Object.keys(movie).length">
-        <div class="h-100 p-3 text-white"
+    <div>
+        <div class="text-white container-fluid p-3"
             :style="{
                     'background': 'linear-gradient(rgba(59, 168, 119, 0.45), rgba(59, 168, 119, 1)), url(https://image.tmdb.org/t/p/original'+movie.backdrop_path+')',
                     'background-size': 'cover'}">
-            <div class="container my-3 d-flex">
-                <div class="col-12 col-md-3 mx-3">
-                    <img :src="movie.poster_path | coverURL" alt="'movie.title'" class="w-100">
+            <div class="row m-0">
+                <div class="container col-12 col-md-3 my-3">
+                    <img :src="movie.poster_path | cover" alt="'movie.title'" class="w-100 mx-auto">
                 </div>
-                <div class="col-12 col-md-9 mx-3 d-flex flex-column justify-content-center align-items-center">
-                    <h2>Detalles: {{movie.title}}</h2>
-                    <p class="lead">{{movie.overview | formatOverview}}</p>
+                <div class=" container col-12 col-md-9 my-auto ">
+                    <div class="mx-auto text-center">
+                        <h2>{{movie.title}}</h2>
+                        <p class="lead">{{movie.overview | formatOverview}}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,7 +86,13 @@ const Details = {
             let text = "";
             value ? text = value : text = 'No hay información de la película'
             return text
-        }
+        },
+        cover(str) {
+            let URL = "";
+            if (!str) URL = `../img/404poster.png`
+            else URL = `https://image.tmdb.org/t/p/original${str}`
+            return URL
+        },
     },
     mounted() {
         this.getMovie()

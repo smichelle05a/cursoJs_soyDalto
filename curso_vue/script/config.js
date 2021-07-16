@@ -1,6 +1,6 @@
 const APIKEY = '27e12a7a8406fbbebaa4843a1d32c3cc';
 const BASEURL = 'https://api.themoviedb.org/3/'
-const URLDeploy = '/playground/curso_vue/'
+const URLDeploy = '/playground/curso_vue'
 
 Vue.mixin({
     data() {
@@ -12,7 +12,7 @@ Vue.mixin({
     filters: {
         coverURL(str) {
             let URL = "";
-            if (str == null) URL = "img/404poster.png"
+            if (!str) URL = `img/404poster.png`
             else URL = `https://image.tmdb.org/t/p/original${str}`
             return URL
         },

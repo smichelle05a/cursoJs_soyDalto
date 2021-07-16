@@ -8,7 +8,9 @@ const MovieComp = {
             <div class="row d-flex">
                 <button
                 @click="movie"
-                class="btn btn-sm mx-1 btn-outline-dark col">
+                class="btn btn-sm mx-1 btn-outline-dark col"
+                v-show="synopsis"
+                >
                     <span>Detalle</span>
                 </button>
                 <button @click="toggleLike" class="btn btn-sm mx-1 col" :class="{

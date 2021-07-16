@@ -48,6 +48,7 @@ const Search = {
         },
         onChangePage(page) {
             store.commit('changePage', page);
+            store.commit('search')
         },
         ...Vuex.mapMutations(['toggleFavMovie'])
     },

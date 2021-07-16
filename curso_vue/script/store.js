@@ -40,7 +40,6 @@ let store = new Vuex.Store({
         },
         changePage(state, page) {
             state.page = page;
-            this.search()
         },
         reset(state) {
             state.query = '';
