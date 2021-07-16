@@ -1,6 +1,6 @@
 const routes = [
     {
-        path: '/',
+        path: '/playground/curso_vue/',
         name: 'home',
         component: Home
     },
