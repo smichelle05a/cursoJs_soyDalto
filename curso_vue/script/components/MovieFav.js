@@ -1,4 +1,4 @@
-let MovieFav = {
+const MovieFav = {
     template: /* html */`
     <div v-show="show" class="movieFav-wrapper">
         <div :id="'fav-'+ _uid" class="movieFav">
