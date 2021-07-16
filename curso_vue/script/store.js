@@ -35,7 +35,7 @@ let store = new Vuex.Store({
                         m.like = false;
                         return m
                     });
-                    router.push('search')
+                    router.push({name:'search'})
                 })
         },
         changePage(state, page) {

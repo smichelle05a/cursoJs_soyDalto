@@ -4,7 +4,7 @@ const SearchComp = {
         `
         <form @submit.prevent="search" class="d-flex">
             <button v-show="query"
-            @click="reset"
+            @click="onReset"
             class="btn btn-outline-danger" type="button">
                 <i class="fas fa-times text-grey" aria-hidden="true"></i>
             </button>

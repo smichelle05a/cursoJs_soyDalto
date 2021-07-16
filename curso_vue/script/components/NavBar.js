@@ -20,11 +20,11 @@ Vue.component('nav-bar',{
                             </li>
                             <li class="nav-item">
                                 <router-link class="nav-link"
-                                :to="'favorites'">Favorites</router-link>
+                                :to="{name:'favorites'}">Favorites</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link class="nav-link"
-                                :to="'profile'">My Profile</router-link>
+                                :to="{name:'profile'}">My Profile</router-link>
                             </li>
                         </ul>
                         <SearchComp/>

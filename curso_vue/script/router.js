@@ -1,26 +1,26 @@
 const routes = [
     {
-        path: '/playground/curso_vue/',
+        path: URLDeploy,
         name: 'home',
         component: Home
     },
     {
-        path: '/movie/:id',
+        path: `${URLDeploy}/movie/: id`,
         name: 'movie',
         component: Details
     },
     {
-        path: '/search',
+        path: `${URLDeploy}/search`,
         name: 'search',
         component: Search
     },
     {
-        path: '/favorites',
+        path: `${URLDeploy}/favorites`,
         name: 'favorites',
         component: Favorites
     },
     {
-        path: '/profile',
+        path: `${URLDeploy}/profile`,
         name: 'profile',
         component: Profile
     }
