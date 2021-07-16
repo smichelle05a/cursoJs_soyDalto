@@ -34,7 +34,7 @@ const SearchComp = {
         },
         onReset() {
             this.reset()
-            router.push('/')
+            router.push({ name: 'home' })
         },
         ...Vuex.mapMutations(['search', 'reset'])
     }
